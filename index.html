@@ -19,15 +19,14 @@
         ></iframe>
 
   <script>
-    // Measure time taken to display CookieYes banner
-    var startTime = performance.now();
-
-    // Event listener for CookieYes banner load
-    document.querySelector('.cky-consent-container').addEventListener('load', function() {
+    document.addEventListener("DOMContentLoaded", function() {
+      var startTime = performance.now();
+      document.querySelector('.cky-consent-container').addEventListener('load', function() {
       var endTime = performance.now();
       var timeTaken = endTime - startTime;
       console.log('Time taken to display CookieYes banner: ' + timeTaken + ' milliseconds');
     });
+    })
   </script>
 </body>
 </html>
