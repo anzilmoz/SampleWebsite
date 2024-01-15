@@ -9,6 +9,21 @@
 <body>
   <h1>This is YT</h1>
     <iframe width="950" height="534" src="https://www.youtube.com/embed/wcDFgir_jgY" title="Dugout Shelter Under 10ft (3m) of Snow - Solo Camping in Survival Shelter During Snow Storm" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<script>
+  try {
+    const HIDE_BANNER_QUERY = "reader="; // Replace with specific query string
+    const currentUrlQuery = window.location.href.split("?")[1] || "";
+    if (currentUrlQuery.includes(HIDE_BANNER_QUERY)) {
+      const styleElement = document.createElement("style");
+      styleElement.innerHTML = `.cky-consent-container { display: none; }`;
+      document.head.appendChild(styleElement);
+    }
+  } catch (error) {
+    console.error(error);
+  }
+</script>
+
 </body>
 </html>
     
