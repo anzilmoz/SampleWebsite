@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+          ad_storage: "denied",
+          ad_user_data: "denied", 
+          ad_personalization: "denied",
+          analytics_storage: "denied",
+          functionality_storage: "denied",
+          personalization_storage: "denied",
+          security_storage: "granted",
+          wait_for_update: 2000,
+      });
+      gtag("set", "ads_data_redaction", true);
+      gtag("set", "url_passthrough", true);
+  </script>
+  
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -283,38 +302,5 @@
     <div class="modal"></div>
 
     <script src="js/main.js"></script>
-
-    <script>
-      window.addEventListener("load", function () {
-        waitForElement(".cky-consent-container");
-      });
-      let bannerLoaded = false;
-      function waitForElement(selector) {
-        const element = document.querySelector(selector);
-        if (element) {
-          const display = getDisplayStyle(element);
-          if (!bannerLoaded) {
-            document.dispatchEvent(new CustomEvent("cookieyes_banner_show"));
-            bannerLoaded = true;
-          }
-        } else {
-          setTimeout(() => {
-            waitForElement(selector);
-          }, 200);
-        }
-      }
-      function getDisplayStyle(element) {
-        return element.currentStyle
-          ? element.currentStyle["display"]
-          : window.getComputedStyle
-          ? window.getComputedStyle(element, null).getPropertyValue("display")
-          : "";
-      }
-
-      // This event will be triggered when the CookieYes banner is shown
-      document.addEventListener("cookieyes_banner_show", function (event) {
-        console.log("getCkyConsent", getCkyConsent());
-      });
-    </script>
   </body>
 </html>
