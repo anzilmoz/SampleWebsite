@@ -19,7 +19,7 @@
       gtag("set", "ads_data_redaction", true);
       gtag("set", "url_passthrough", false);
   </script> -->
-  
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -297,6 +297,12 @@
 
       <!-- Footer -->
       <footer></footer>
+
+      <script>
+        window.addEventListener("load", function () {
+          setTimeout(() => console.log("getCkyConsent", getCkyConsent()), 2000);
+        });
+      </script>
     </div>
 
     <div class="modal"></div>
