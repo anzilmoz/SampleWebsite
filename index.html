@@ -299,9 +299,16 @@
       <footer></footer>
 
       <script>
-        // show getCkyConsent after 2 seconds
+        // show getCkyConsent after 2 seconds as setInterval with iteration count
         window.addEventListener("load", function () {
-          setTimeout(() => console.log("getCkyConsent", getCkyConsent()), 2000);
+          let i = 0;
+          let interval = setInterval(() => {
+            console.log("getCkyConsent", getCkyConsent());
+            i++;
+            if (i === 5) {
+              clearInterval(interval);
+            }
+          }, 500);
         });
       </script>
     </div>
