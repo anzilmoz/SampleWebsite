@@ -301,14 +301,15 @@
       <script>
         // show getCkyConsent after 2 seconds as setInterval with iteration count
         window.addEventListener("load", function () {
-          let i = 0;
+          console.log("getCkyConsent 0:", getCkyConsent());
+          let i = 1;
           let interval = setInterval(() => {
-            console.log("getCkyConsent", getCkyConsent());
+            console.log("getCkyConsent", `${i}:`, getCkyConsent());
             i++;
-            if (i === 5) {
+            if (i === 10) {
               clearInterval(interval);
             }
-          }, 500);
+          }, 100);
         });
       </script>
     </div>
