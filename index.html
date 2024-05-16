@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<!--     <script src="js/prototype.js"></script> -->
+    <script>
+      // Save the original fetch function for later use if needed
+      const originalFetch = window.fetch;
+      
+      // Define your custom fetch function
+      window.fetch = function(url, options) {
+          // You can add your custom logic here before or after calling the original fetch function
+          console.log("Custom fetch function called with URL:", url);
+      
+          // Call the original fetch function with the provided arguments
+          return originalFetch(url, options);
+      };
+    </script>
     <script id="cookieyes" type="text/javascript" src="https://mojoview.com/client_data/4cae21c60fefa87fcfa00dd7/script.js"></script>
-    <script src="js/prototype.js"></script>
+<!--     <script src="js/prototype.js"></script> -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
