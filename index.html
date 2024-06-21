@@ -310,5 +310,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="modal"></div>
 
     <script src="js/main.js"></script>
+
+    <script>
+  document.addEventListener("cookieyes_banner_load", function (eventData) {
+    console.log("Banner load event:", eventData.detail);
+  })
+  document.addEventListener("cookieyes_consent_update", function (eventData) {
+    console.log("Consent update event:", eventData.detail);
+  })
+</script>
   </body>
 </html>
