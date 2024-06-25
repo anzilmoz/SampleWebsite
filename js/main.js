@@ -5,8 +5,6 @@ const footerElement = document.querySelector("footer");
 
 // Set a demo cookie on localStorage and cookies tab
 localStorage.setItem("_fbp", "test_value");
-document.cookie = "_ga=test_ga_cookie"
-
 
 headerElement.innerHTML = `<!-- header 1 -->
 <div>
