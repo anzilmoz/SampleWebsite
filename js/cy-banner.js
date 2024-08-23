@@ -14745,11 +14745,16 @@
                 e.forEach((function(e) {
                     if (n.includes(e.id)) {
                         var r = "#".concat(t).concat(e.id);
+
+                        const groupID = t.concat(e.id);
+                        const toggleArray = [...document.getElementById(groupID).querySelectorAll(`[id^=${groupID}Item][id$=ToggleConsent], [id^=${groupID}Item][id$=ToggleLegitimate]`)];
+                        const toggleMap = new Map(toggleArray.map(e => [e.id, e]));
+                        
                         e.sublist.forEach((function(e) {
                             var t = "".concat(r, "Item").concat(e.id);
                             ["ToggleConsent", "ToggleLegitimate"].forEach((function(e) {
                                 return function(e, t) {
-                                    var n = E(e);
+                                    var n = toggleMap.get(e);
                                     if (!n)
                                         return;
                                     var r = n.getAttribute("aria-label")
