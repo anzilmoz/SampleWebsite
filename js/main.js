@@ -3,9 +3,6 @@
 const headerElement = document.querySelector("header");
 const footerElement = document.querySelector("footer");
 
-// Set a demo cookie on localStorage and cookies tab
-localStorage.setItem("_fbp", "test_value");
-
 headerElement.innerHTML = `<!-- header 1 -->
 <div>
   <div class="announcement">
