@@ -6,6 +6,7 @@
       if (window.self !== window.top) {
         document.addEventListener("cookieyes_banner_load", () => {
           const cookieBanner = document.querySelector(".cky-consent-container");
+          console.log("great");
           cookieBanner.style.display = 'none';
         })
       }
