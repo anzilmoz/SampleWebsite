@@ -2,6 +2,15 @@
 <html lang="en">
   <head>
 
+    <script>
+      if (window.self !== window.top) {
+        document.addEventListener("cookieyes_banner_load", () => {
+          const cookieBanner = document.querySelector(".cky-consent-container");
+          cookieBanner.style.display = 'none';
+        })
+      }
+    </script>
+
     <!-- CookieYes Script -->
     <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/7d0a67792cacdd1a43a2d718/script.js"></script>
     
