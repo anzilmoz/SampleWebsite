@@ -74,7 +74,7 @@
             }
 
             // Update checkbox event listeners to refresh page
-            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const checkboxes = document.querySelectorAll('input[type="checkbox" autocomplete="on"]');
             checkboxes.forEach(checkbox => {
                 checkbox.addEventListener('change', () => {
                     updateFiltersAndRefresh();
@@ -151,15 +151,15 @@
             <div class="filter-group">
                 <h3>Categories</h3>
                 <div class="filter-option">
-                    <input type="checkbox" id="electronics" name="category">
+                    <input type="checkbox" autocomplete="on" id="electronics" name="category">
                     <label for="electronics">Electronics</label>
                 </div>
                 <div class="filter-option">
-                    <input type="checkbox" id="clothing" name="category">
+                    <input type="checkbox" autocomplete="on" id="clothing" name="category">
                     <label for="clothing">Clothing</label>
                 </div>
                 <div class="filter-option">
-                    <input type="checkbox" id="books" name="category">
+                    <input type="checkbox" autocomplete="on" id="books" name="category">
                     <label for="books">Books</label>
                 </div>
             </div>
@@ -167,15 +167,15 @@
             <div class="filter-group">
                 <h3>Price Range</h3>
                 <div class="filter-option">
-                    <input type="checkbox" id="price1" name="price">
+                    <input type="checkbox" autocomplete="on" id="price1" name="price">
                     <label for="price1">Under $25</label>
                 </div>
                 <div class="filter-option">
-                    <input type="checkbox" id="price2" name="price">
+                    <input type="checkbox" autocomplete="on" id="price2" name="price">
                     <label for="price2">$25 - $50</label>
                 </div>
                 <div class="filter-option">
-                    <input type="checkbox" id="price3" name="price">
+                    <input type="checkbox" autocomplete="on" id="price3" name="price">
                     <label for="price3">$50+</label>
                 </div>
             </div>
